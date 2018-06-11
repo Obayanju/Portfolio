@@ -1,0 +1,286 @@
+html,
+body {
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  color: white;
+  background-color: black;
+}
+
+/*
+* common
+*/
+a {
+  color: rgb(168, 130, 238);
+  text-decoration: none;
+}
+
+a:visited {
+  color: purple;
+}
+aside h2 {
+  /* display: none; */
+}
+/*
+* header
+*/
+
+header {
+  padding: 0.5em;
+  line-height: 1em;
+  color: black;
+  background: gold;
+}
+
+header img {
+  width: 40px;
+  height: 40px;
+}
+
+.header-title {
+  /* this is a percentage of parent line height */
+  vertical-align: 30%;
+  /* so top and bottom margins and paddings are respected */
+  display: inline-block;
+}
+
+.header-second-title {
+  float: right;
+  margin: 1em 0;
+}
+
+/*
+* main
+*/
+
+main {
+  padding: 0 1em;
+}
+
+.main-section {
+  margin-top: 20px;
+}
+
+.header-text {
+  margin-top: 0;
+}
+
+/* which is better; main .main-section or .main-section */
+main .main-section {
+  display: flex;
+  justify-content: space-around;
+}
+
+main article {
+  padding-right: 100px;
+  max-width: 550px;
+}
+
+aside {
+  display: flex;
+}
+
+aside span a {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.5em;
+}
+
+aside span img {
+  width: inherit;
+  height: inherit;
+}
+
+/* medium logo */
+aside span a:last-child {
+  color: #ffd107;
+  font-size: 3.5em;
+}
+
+aside span a .fa-medium {
+  position: absolute;
+  top: 191px;
+}
+
+.main-section p {
+  line-height: 1.2em;
+}
+
+/*
+* projects
+*/
+
+.project-grid .header-text {
+  margin-right: 1em;
+  align-self: center;
+  line-height: 1.2em;
+}
+
+.project-grid {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.project-grid .header-text {
+  text-align: right;
+}
+
+.projects {
+  display: flex;
+  /* justify-content: center; */
+}
+
+.projects a {
+  /* width: 300px; */
+  height: 250px;
+  font-size: 0.8em;
+  text-align: center;
+  color: rgb(168, 130, 238);
+}
+
+/* -n+2 gets the first 2 elements */
+.projects a:nth-child(-n + 2) {
+  padding-right: 40px;
+}
+
+.projects img {
+  width: 250px;
+  height: 200px;
+  box-shadow: 6px 6px #ffd701;
+}
+
+.projects img:hover {
+  transform: translate(6px, 6px);
+  box-shadow: 0 0 black;
+}
+
+p.project-link {
+  /* font-size: .9em;
+  text-align: center; */
+}
+
+/*
+* footer
+*/
+footer {
+  /* position: fixed; */
+  /* bottom: 0; */
+  text-align: center;
+  padding: 10px 0;
+  padding: 40px 0 20px;
+  font-size: 0.8em;
+  color: grey;
+}
+
+/*
+----------- Responsive Design Section -----------
+*/
+@media screen and (max-width: 680px) {
+  /* header */
+  .header-second-title {
+    width: 90px;
+    margin: 0.5em 0;
+  }
+  /* main content */
+  .main-section {
+    flex-direction: column-reverse;
+  }
+
+  main article {
+    padding-right: 10px;
+  }
+
+  aside {
+    flex-direction: column;
+    padding-bottom: 20px;
+  }
+
+  aside span a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0 0.5em 0 0;
+  }
+
+  aside span a:last-child {
+    font-size: 2.3em;
+  }
+
+  aside span a .fa-medium {
+    top: 344px;
+  }
+
+  /* projects content */
+  .project-grid {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .projects {
+    flex-direction: column;
+  }
+
+  .project-grid .projects a {
+    /* overwrites previous padding */
+    padding: 0;
+  }
+
+  /* footer */
+  footer {
+    padding: 40px 40px 20px;
+  }
+}
+
+@media screen and (min-width: 681px) and (max-width: 1040px) {
+  /* main */
+  main article {
+    padding-right: 10px;
+  }
+
+  aside span a {
+    width: 30px;
+    height: 30px;
+  }
+
+  aside span a:last-child {
+    font-size: 2.1em;
+  }
+
+  aside span a .fa-medium {
+    top: 154px;
+  }
+
+  /* TODO: find a way not to rewrite the this section of code */
+  /* projects content */
+  .project-grid {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .projects {
+    flex-wrap: wrap;
+  }
+
+  .projects .project-1 {
+    flex-grow: 1;
+  }
+
+  .projects .project-2 {
+    flex-grow: 1;
+  }
+
+  .projects .project-3 {
+    flex-grow: 1;
+  }
+
+  .project-grid .projects a {
+    /* overwrites previous padding */
+    padding: 0;
+  }
+
+  .project-grid .header-text {
+    text-align: inherit;
+  }
+}
