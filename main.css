@@ -18,14 +18,13 @@ a {
 a:visited {
   color: purple;
 }
-aside h2 {
-  /* display: none; */
-}
+
 /*
 * header
 */
 
 header {
+  display: flex;
   padding: 0.5em;
   line-height: 1em;
   color: black;
@@ -38,14 +37,16 @@ header img {
 }
 
 .header-title {
+  flex-grow: 1;
+  margin: 0.5em 0 0 0.5em;
   /* this is a percentage of parent line height */
-  vertical-align: 30%;
+  /* vertical-align: 30%; */
   /* so top and bottom margins and paddings are respected */
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .header-second-title {
-  float: right;
+  /* float: right; */
   margin: 1em 0;
 }
 
@@ -154,11 +155,6 @@ aside span a .fa-medium {
 .projects img:hover {
   transform: translate(6px, 6px);
   box-shadow: 0 0 black;
-}
-
-p.project-link {
-  /* font-size: .9em;
-  text-align: center; */
 }
 
 /*
