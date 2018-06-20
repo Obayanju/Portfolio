@@ -81,27 +81,23 @@ aside {
   display: flex;
 }
 
+aside span {
+  display: flex;
+  flex-direction: column;
+}
 aside span a {
-  display: block;
-  width: 50px;
-  height: 50px;
-  margin-bottom: 0.5em;
+  padding-bottom: 1px;
 }
 
 aside span img {
-  width: inherit;
-  height: inherit;
+  width: 50px;
+  /* height: inherit; */
 }
 
 /* medium logo */
 aside span a:last-child {
   color: #ffd107;
-  font-size: 3.5em;
-}
-
-aside span a .fa-medium {
-  position: absolute;
-  top: 191px;
+  font-size: 3.58em;
 }
 
 .main-section p {
@@ -193,15 +189,20 @@ footer {
     padding-bottom: 20px;
   }
 
+  aside span {
+    flex-direction: row;
+  }
+
   aside span a {
-    display: inline-block;
+    padding-right: 8px;
+  }
+
+  aside span img {
     width: 30px;
-    height: 30px;
-    margin: 0 0.5em 0 0;
   }
 
   aside span a:last-child {
-    font-size: 2.3em;
+    font-size: 2.15em;
   }
 
   aside span a .fa-medium {
@@ -235,9 +236,8 @@ footer {
     padding-right: 10px;
   }
 
-  aside span a {
+  aside span img {
     width: 30px;
-    height: 30px;
   }
 
   aside span a:last-child {
