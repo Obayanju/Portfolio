@@ -72,30 +72,30 @@ main .main-section {
   justify-content: space-around;
 }
 
-main article {
+main .intro {
   padding-right: 100px;
   max-width: 550px;
 }
 
-aside {
+.picture-and-social {
   display: flex;
 }
 
-aside span {
+.picture-and-social .social {
   display: flex;
   flex-direction: column;
 }
-aside span a {
+.picture-and-social .social a {
   padding-bottom: 1px;
 }
 
-aside span img {
+.picture-and-social .social img {
   width: 50px;
   /* height: inherit; */
 }
 
 /* medium logo */
-aside span a:last-child {
+.picture-and-social .social a:last-child {
   color: #ffd107;
   font-size: 3.58em;
 }
@@ -180,32 +180,32 @@ footer {
     flex-direction: column-reverse;
   }
 
-  main article {
+  main .intro {
     padding-right: 10px;
   }
 
-  aside {
+  .picture-and-social {
     flex-direction: column;
     padding-bottom: 20px;
   }
 
-  aside span {
+  .picture-and-social .social {
     flex-direction: row;
   }
 
-  aside span a {
+  .picture-and-social .social a {
     padding-right: 8px;
   }
 
-  aside span img {
+  .picture-and-social .social img {
     width: 30px;
   }
 
-  aside span a:last-child {
+  .picture-and-social .social a:last-child {
     font-size: 2.15em;
   }
 
-  aside span a .fa-medium {
+  .picture-and-social .social a .fa-medium {
     top: 344px;
   }
 
@@ -232,19 +232,19 @@ footer {
 
 @media screen and (min-width: 681px) and (max-width: 1040px) {
   /* main */
-  main article {
+  main .intro {
     padding-right: 10px;
   }
 
-  aside span img {
+  .picture-and-social .social img {
     width: 30px;
   }
 
-  aside span a:last-child {
+  .picture-and-social .social a:last-child {
     font-size: 2.1em;
   }
 
-  aside span a .fa-medium {
+  .picture-and-social .social a .fa-medium {
     top: 154px;
   }
 
