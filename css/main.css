@@ -69,12 +69,12 @@ main {
 /* which is better; main .main-section or .main-section */
 main .main-section {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 main .intro {
-  padding-right: 100px;
   max-width: 550px;
+  padding-right: 10px;
 }
 
 .picture-and-social {
@@ -101,7 +101,7 @@ main .intro {
 }
 
 .main-section p {
-  line-height: 1.2em;
+  line-height: 1.6em;
 }
 
 /*
