@@ -10,7 +10,7 @@ body {
 /*
 * common
 */
-a {
+a:link {
   color: rgb(168, 130, 238);
   text-decoration: none;
 }
@@ -130,11 +130,9 @@ main .intro {
 }
 
 .projects a {
-  /* width: 300px; */
   height: 250px;
   font-size: 0.8em;
   text-align: center;
-  color: rgb(168, 130, 238);
 }
 
 /* -n+2 gets the first 2 elements */
